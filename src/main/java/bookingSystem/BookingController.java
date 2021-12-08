@@ -1,6 +1,7 @@
 package bookingSystem;
 
 import bookingSystem.models.*;
+import transactionSystem.PaymentController;
 //import dummyPackage.UserDummy;
 
 import java.sql.*;
@@ -255,6 +256,8 @@ public class BookingController {
     public void cancelTicket(Ticket t){
         t.getSeat().setAvailable(true);
         t.setUserId(0);
+        PaymentController p = new PaymentController();
+        p.refund(p.findPayment(t));
     }
 
     /**
