@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import java.sql.*;
 
 public class UserController{
-    public static void main(String[] args) {
-        UserController uc = new UserController();
-    }
 
     private ArrayList<RegisteredUser> listOfRegisteredUsers;
     private ArrayList<User> listOfUsers;

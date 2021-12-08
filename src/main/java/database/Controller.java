@@ -8,9 +8,6 @@ import java.sql.*;
  */
 
 public class Controller {
-    public static void main( String args[] ) {
-        createSQLiteDB();
-    }
     private static void createSQLiteDB() {
         Connection c = null;
         try {
